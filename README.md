@@ -2,11 +2,6 @@
 
 Practica RA1 ACT2 de Disseny d'Interficies, realizada en Unity 6000.3.9f1.
 
-## Ejecutar
-
-Descargar el ZIP de Windows desde Releases, extraer todo su contenido y abrir
-`MiniMenuPausa.exe`. Mantener el ejecutable junto a sus carpetas y DLL.
-
 ## Controles y ajustes
 
 - Escape abre y cierra el menu y pausa las fisicas.
@@ -17,11 +12,6 @@ Descargar el ZIP de Windows desde Releases, extraer todo su contenido y abrir
 - Apply confirma y guarda los ajustes en PlayerPrefs.
 - Default Values prepara los valores predeterminados.
 - Al salir con cambios pendientes se puede descartarlos o volver al menu.
-
-## Abrir el proyecto
-
-Agregar esta carpeta desde Unity Hub y abrir `Assets/Scenes/SampleScene.unity`.
-El repositorio incluye Assets, Packages y ProjectSettings; Unity regenera Library.
 
 ## Audio
 
