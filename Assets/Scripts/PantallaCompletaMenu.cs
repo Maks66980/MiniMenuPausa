@@ -23,7 +23,12 @@ public class PantallaCompletaMenu : MonoBehaviour
         // ResolucionMenu restaura resolucion y modo juntos al iniciar.
     }
 
-    private void CambiarModo(bool valor) { modoTemporal = valor; }
+    private void CambiarModo(bool valor)
+    {
+        modoTemporal = valor;
+        // Prueba el modo junto a la resolucion temporal, sin guardar.
+        GetComponent<ResolucionMenu>().Previsualizar(modoTemporal);
+    }
 
     public void Aplicar()
     {

@@ -56,7 +56,17 @@ public class ResolucionMenu : MonoBehaviour
         dropdownResolucion.onValueChanged.AddListener(CambiarResolucion);
     }
 
-    private void CambiarResolucion(int indice) { indiceTemporal = indice; }
+    private void CambiarResolucion(int indice)
+    {
+        indiceTemporal = indice;
+        Previsualizar(GetComponent<PantallaCompletaMenu>().PantallaCompleta);
+    }
+
+    // Cambia la pantalla para probarla sin confirmar ni guardar los ajustes.
+    public void Previsualizar(bool pantallaCompleta)
+    {
+        AplicarAlJuego(pantallaCompleta);
+    }
 
     public void Aplicar(bool pantallaCompleta)
     {
@@ -74,7 +84,7 @@ public class ResolucionMenu : MonoBehaviour
     {
         FullScreenMode modo = FullScreenMode.Windowed;
         if (pantallaCompleta) { modo = FullScreenMode.FullScreenWindow; }
-        Vector2Int tamano = resoluciones[indiceAplicado];
+        Vector2Int tamano = resoluciones[indiceTemporal];
         Screen.SetResolution(tamano.x, tamano.y, modo);
     }
 

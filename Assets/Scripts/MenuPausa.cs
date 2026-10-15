@@ -75,6 +75,8 @@ public class MenuPausa : MonoBehaviour
         volumenSFX.ValoresPredeterminados();
         resolucion.ValoresPredeterminados();
         pantalla.ValoresPredeterminados();
+        // Prueba ambos valores juntos despues de actualizar los dos controles.
+        resolucion.Previsualizar(pantalla.PantallaCompleta);
     }
 
     private void Descartar()
@@ -83,6 +85,8 @@ public class MenuPausa : MonoBehaviour
         volumenSFX.Descartar();
         resolucion.Descartar();
         pantalla.Descartar();
+        // Recupera tambien la pantalla real, no solo el dropdown y el toggle.
+        resolucion.Previsualizar(pantalla.PantallaCompleta);
     }
 
     private void MostrarConfirmacion()
